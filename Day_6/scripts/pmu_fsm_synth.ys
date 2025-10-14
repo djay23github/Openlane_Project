@@ -1,0 +1,22 @@
+# # ===================================================================
+# # Yosys Synthesis Script for PMU FSM - Skywater 130nm
+# # Optimized for the debugged PMU FSM design
+# # ===================================================================
+
+read_liberty -lib ../libs/sky130_fd_sc_hd__tt_025C_1v80.lib
+
+read_verilog -g2012 -sv rtl/pmu_fsm_icarus.sv
+
+synth -top pmu_fsm
+
+dfflibmap -liberty ../libs/sky130_fd_sc_hd__tt_025C_1v80.lib
+
+abc -liberty ../libs/sky130_fd_sc_hd__tt_025C_1v80.lib
+
+opt_clean -purge
+
+flatten
+
+stat
+
+write_verilog -noattr rtl/pmu_fsm_icarus_synth.v

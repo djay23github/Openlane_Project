@@ -1,0 +1,19 @@
+Process   PVT Corner                    Total Power
+FF        ff_n40C_1v95                  3.11e-04
+FF        ff_n40C_1v76                  2.51e-04
+FF        ff_n40C_1v95_ccsnoise         3.11e-04
+FF        ff_100C_1v65                  2.29e-04
+FF        ff_n40C_1v65                  2.19e-04
+FF        ff_n40C_1v56                  1.95e-04
+FF        ff_100C_1v95                  3.28e-04
+SS        ss_100C_1v40                  1.59e-04
+SS        ss_n40C_1v44                  1.58e-04
+SS        ss_n40C_1v76                  2.53e-04
+SS        ss_100C_1v60                  2.16e-04
+SS        ss_n40C_1v60                  2.07e-04
+SS        ss_n40C_1v40                  1.43e-04
+SS        ss_n40C_1v28                  1.03e-04
+SS        ss_n40C_1v60_ccsnoise         2.07e-04
+SS        ss_n40C_1v35                  1.24e-04
+TT        tt_100C_1v80                  2.76e-04
+TT        tt_025C_1v80                  2.70e-04

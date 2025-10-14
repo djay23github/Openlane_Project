@@ -1,0 +1,43 @@
+*---------------------------------------------------------
+* CMOS Inverter - VTC Curve (Varying NMOS Width)
+*---------------------------------------------------------
+
+.param temp = 27
+
+* Include SKY130 model
+.lib '/home/djspit/.volare/sky130A/libs.tech/ngspice/sky130.lib.spice' tt
+
+
+* Inverter
+*.subckt inverter in out vdd vss
+xm1 out in vdd vdd sky130_fd_pr__pfet_01v8 w=1.68 l=0.15
+xm2 out in 0 0 sky130_fd_pr__nfet_01v8 w=0.84 l=0.15
+*.ends inverter
+
+
+* Instantiating the inverter
+*Xinv in out vdd vss inverter
+
+* Load capacitance (small)
+Cload out 0 10f
+
+* Power supply
+Vdd vdd 0 1.8V
+Vin in  0 1.8V
+
+* DC sweep for input voltage
+.op
+.dc Vin 0 1.8 0.01
+
+
+.control
+run
+display
+setplot dc1 
+set curplottitle="Inverter VTC Curve"
+plot v(out) vs v(in)
+
+.endc
+
+
+.end

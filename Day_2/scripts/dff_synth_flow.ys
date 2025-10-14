@@ -1,0 +1,23 @@
+#read_liberty -lib ../libs/sky130_fd_sc_hd__tt_025C_1v80.lib
+#read_verilog rtl/dff_asyncres.v
+#synth -top dff_asyncres
+#dfflibmap -liberty ../libs/sky130_fd_sc_hd__tt_025C_1v80.lib
+#abc -liberty ../libs/sky130_fd_sc_hd__tt_025C_1v80.lib
+#write_verilog -noattr rtl/dff_asyncres.netlist.v
+#show dff_asyncres
+
+#read_liberty -lib ../libs/sky130_fd_sc_hd__tt_025C_1v80.lib
+#read_verilog rtl/dff_async_set.v
+#synth -top dff_async_set
+#dfflibmap -liberty ../libs/sky130_fd_sc_hd__tt_025C_1v80.lib
+#abc -liberty ../libs/sky130_fd_sc_hd__tt_025C_1v80.lib
+#write_verilog -noattr rtl/dff_async_set.netlist.v
+#show dff_async_set
+
+read_liberty -lib ../libs/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog rtl/dff_asyncres_syncres.v
+synth -top dff_asyncres_syncres
+dfflibmap -liberty ../libs/sky130_fd_sc_hd__tt_025C_1v80.lib
+abc -liberty ../libs/sky130_fd_sc_hd__tt_025C_1v80.lib
+write_verilog -noattr rtl/dff_asyncres_syncres.netlist.v
+show dff_asyncres_syncres

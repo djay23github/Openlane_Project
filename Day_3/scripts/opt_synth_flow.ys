@@ -1,0 +1,16 @@
+# read_liberty -lib ../libs/sky130_fd_sc_hd__tt_025C_1v80.lib
+# read_verilog rtl/multiple_module_opt2.v
+# synth -top multiple_module_opt2
+# flatten
+# opt_clean -purge
+# abc -liberty ../libs/sky130_fd_sc_hd__tt_025C_1v80.lib
+# write_verilog -noattr rtl/multiple_module_opt2.flat.netlist.v
+# show
+
+
+# read_liberty -lib ../libs/sky130_fd_sc_hd__tt_025C_1v80.lib
+# read_verilog rtl/counter_opt2.v
+# synth -top counter_opt2
+# dfflibmap -liberty ../libs/sky130_fd_sc_hd__tt_025C_1v80.lib
+# abc -liberty ../libs/sky130_fd_sc_hd__tt_025C_1v80.lib
+# write_verilog -noattr rtl/counter_opt2.netlist.v

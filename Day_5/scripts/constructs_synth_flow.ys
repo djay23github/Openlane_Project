@@ -1,0 +1,7 @@
+read_liberty -lib ../libs/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog rtl/rca.v
+read_verilog rtl/fa.v
+synth -top rca
+abc -liberty ../libs/sky130_fd_sc_hd__tt_025C_1v80.lib
+write_verilog -noattr rtl/rca.netlist.v
+show

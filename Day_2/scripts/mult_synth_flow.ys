@@ -1,0 +1,13 @@
+#read_liberty -lib ../libs/sky130_fd_sc_hd__tt_025C_1v80.lib
+#read_verilog rtl/mult_2.v
+#synth -top mul2
+#abc -liberty ../libs/sky130_fd_sc_hd__tt_025C_1v80.lib
+#write_verilog -noattr rtl/mult_2.netlist.v
+#show mul2
+
+read_liberty -lib ../libs/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog rtl/mult_8.v
+synth -top mul8
+abc -liberty ../libs/sky130_fd_sc_hd__tt_025C_1v80.lib
+write_verilog -noattr rtl/mult_8.netlist.v
+show mul8

@@ -1,0 +1,7 @@
+read_liberty -lib ../libs/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog rtl/multiple_modules.v
+synth -top multiple_modules
+abc -liberty ../libs/sky130_fd_sc_hd__tt_025C_1v80.lib
+flatten
+write_verilog -noattr multiple_modules.flat.v
+show multiple_modules

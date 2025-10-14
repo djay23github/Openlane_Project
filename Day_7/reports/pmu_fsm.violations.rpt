@@ -1,0 +1,31 @@
+Startpoint: clk_stable (input port clocked by clk)
+Endpoint: error (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+    Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------
+           0.00    0.00    0.00   clock clk (rise edge)
+                   1.30    1.30   clock network delay (ideal)
+                   3.00    4.30 ^ input external delay
+   0.00    0.03    0.01    4.31 ^ clk_stable (in)
+           0.03    0.00    4.31 ^ _110_/A2 (sky130_fd_sc_hd__a41oi_1)
+   0.00    0.10    0.09    4.40 v _110_/Y (sky130_fd_sc_hd__a41oi_1)
+           0.10    0.00    4.40 v _111_/B1 (sky130_fd_sc_hd__a211oi_1)
+   0.02    0.68    0.59    4.99 ^ _111_/Y (sky130_fd_sc_hd__a211oi_1)
+           0.68    0.00    4.99 ^ error (out)
+                           4.99   data arrival time
+
+           0.00   10.00   10.00   clock clk (rise edge)
+                   1.30   11.30   clock network delay (ideal)
+                  -0.30   11.00   clock uncertainty
+                   0.00   11.00   clock reconvergence pessimism
+                  -2.00    9.00   output external delay
+                           9.00   data required time
+-----------------------------------------------------------------------
+                           9.00   data required time
+                          -4.99   data arrival time
+-----------------------------------------------------------------------
+                           4.01   slack (MET)
+
+

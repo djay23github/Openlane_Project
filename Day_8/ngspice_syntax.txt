@@ -1,0 +1,17 @@
+.LIB "<name: xxx>.mod" CMOS_MODELS
+R<name> <1st node> <second node> <value>
+M<name> <drain> <gate> <source> <bulk> <name in tech file> w=<value> L=<value>
+V<name> <1st node> <second node> <value>
+C<name> <1st node> <second node> <value>
+
+.lib cmos_models
+.Model <name that should match in netlist> NMOS (TOX = .. VTH0 = .. U0 = .. GAMMA1 = ..)
+.Model <name that should match in netlist> PMOS (TOX = .. VTH0 = .. U0 = .. GAMMA1 = ..)
+.endl
+
+
+.<mode: dc> <voltage node to sweep: Vin> <start value: 0> <end value: 2.5> <steps: 0.1> <voltage node to sweep: Vdd> <start value: 0> <end value: 2.5> <steps: 2.5>
+
+To view simulation and display the output
+ngspice <spice file name>
+plot -<name node>

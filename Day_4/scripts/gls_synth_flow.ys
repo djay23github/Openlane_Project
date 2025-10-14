@@ -1,0 +1,6 @@
+read_liberty -lib ../libs/sky130_fd_sc_hd__tt_025C_1v80.lib
+read_verilog rtl/blocking_caveat.v
+synth -top blocking_caveat
+abc -liberty ../libs/sky130_fd_sc_hd__tt_025C_1v80.lib
+write_verilog -noattr rtl/blocking_caveat.netlist.v
+show

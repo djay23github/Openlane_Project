@@ -1,0 +1,33 @@
+* SKY130 NMOS Id-Vds Sweep
+
+.param temp=25
+.option scale=1e-6
+.lib "/home/djspit/.volare/sky130A/libs.tech/ngspice/sky130.lib.spice" tt
+
+*-----------------------------------------------------------
+* Circuit setup
+*-----------------------------------------------------------
+
+XM1 drain gate 0 0 sky130_fd_pr__nfet_01v8 w=5 l=2
+VDS drain 0 1.8 
+VGS gate 0 1.8
+
+
+*------------------------------------------------------------
+* DC Sweep - VDS changes, with step VGS
+*------------------------------------------------------------
+
+.op
+.dc VDS 0 1.8 0.1 VGS 0 1.8 0.2
+
+*------------------------------------------------------------
+* Plot Id vs VDS
+*------------------------------------------------------------
+
+.control
+run
+display
+setplot dc1
+.endc
+
+.end
