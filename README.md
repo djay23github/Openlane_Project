@@ -119,7 +119,7 @@ graph_analysis.py -  a python script to analyze the graphs for power and timing 
 
 ---
 
-# 🗓️ Day 10 - OpenLane Tool Flow Generation - RTL2GDSII
+### 🗓️ Day 10 - OpenLane Tool Flow Generation - RTL2GDSII
 
 Completed the automated flow for PnR using Openlane tool for the PMU FSM Design and generated reports for analysis
 
