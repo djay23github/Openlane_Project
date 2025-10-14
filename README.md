@@ -1,7 +1,9 @@
 # RTL2GDSII Flow using Opensource Tools - Power Management Unit FSM Design 🧠⚙️
 
 This repository documents my learning journey through open-source ASIC design tools and methodologies using the **Skywater 130nm PDK**.  
+
 Each day covers hands-on activities, tool usage, and theoretical understanding of VLSI design concepts — from RTL simulation to synthesis, STA, SPICE analysis, and PnR automation.
+
 The structure of this repository is inspired by the RTL Design and Synthesis Workshop Flow by Kunal Ghosh
 ---
 
@@ -17,7 +19,7 @@ The structure of this repository is inspired by the RTL Design and Synthesis Wor
 - PnR using the automated flow (https://github.com/The-OpenROAD-Project/OpenLane)  
 
 **Design Used:**  
-[`good_shift_reg.v`](https://github.com/kunalg123/sky130RTLDesignWorkshop) from *Kunal Ghosh’s sky130RTLDesignWorkshop repository*
+good_shift_reg.v from (https://github.com/kunalg123/sky130RTLDesignAndSynthesisWorkshop)
 
 - Verilog simulation performed using **iVerilog**  
 - `.vcd` file generated and visualized using **GTKWave**
@@ -57,7 +59,6 @@ The structure of this repository is inspired by the RTL Design and Synthesis Wor
 `Y = ~(A.B + C)` → If `A = 0` (constant), then `Y = ~C` (acts as an inverter).
 
 **Logic Optimization Example:**
-```verilog```
-assign y = a ? (b ? c : (c ? a : 0)) : (!c);
+`assign y = a ? (b ? c : (c ? a : 0)) : (!c);`
 Simplified to 
-y = ac + a.c' = a(c + c') = a
+`y = ac + a.c' = a(c + c') = a`
