@@ -115,7 +115,7 @@ Using ngspice tool, spice models of inverter VTC curve, inverter transient behav
 ***OpenSTA tool*** - timing reports for the PMU FSM were calculated at different PVT corners
 
 change_process.py -  a python script to generate power and timing report summary of the different PVT corners
-graph_analysis.py -  a python script to analyze the graphs for power and timing summary report ( setup and old) at the different PVT corners
+graph_analysis.py -  a python script to analyze the graphs for power and timing summary report ( setup and hold) at the different PVT corners
 
 ---
 
