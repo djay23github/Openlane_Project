@@ -1,0 +1,154 @@
+magic
+tech sky130A
+magscale 1 2
+timestamp 1760410958
+<< nwell >>
+rect 1066 2159 13194 14161
+<< obsli1 >>
+rect 1104 2159 13156 14161
+<< obsm1 >>
+rect 842 1368 13156 14192
+<< metal2 >>
+rect 3514 15627 3570 16427
+rect 10598 15627 10654 16427
+rect 1858 0 1914 800
+rect 5354 0 5410 800
+rect 8850 0 8906 800
+rect 12346 0 12402 800
+<< obsm2 >>
+rect 846 15571 3458 15627
+rect 3626 15571 10542 15627
+rect 10710 15571 12862 15627
+rect 846 856 12862 15571
+rect 846 575 1802 856
+rect 1970 575 5298 856
+rect 5466 575 8794 856
+rect 8962 575 12290 856
+rect 12458 575 12862 856
+<< metal3 >>
+rect 0 15512 800 15632
+rect 0 14152 800 14272
+rect 13483 13608 14283 13728
+rect 0 12792 800 12912
+rect 0 11432 800 11552
+rect 0 10072 800 10192
+rect 0 8712 800 8832
+rect 13483 8168 14283 8288
+rect 0 7352 800 7472
+rect 0 5992 800 6112
+rect 0 4632 800 4752
+rect 0 3272 800 3392
+rect 13483 2728 14283 2848
+rect 0 1912 800 2032
+rect 0 552 800 672
+<< obsm3 >>
+rect 880 15432 13483 15605
+rect 798 14352 13483 15432
+rect 880 14072 13483 14352
+rect 798 13808 13483 14072
+rect 798 13528 13403 13808
+rect 798 12992 13483 13528
+rect 880 12712 13483 12992
+rect 798 11632 13483 12712
+rect 880 11352 13483 11632
+rect 798 10272 13483 11352
+rect 880 9992 13483 10272
+rect 798 8912 13483 9992
+rect 880 8632 13483 8912
+rect 798 8368 13483 8632
+rect 798 8088 13403 8368
+rect 798 7552 13483 8088
+rect 880 7272 13483 7552
+rect 798 6192 13483 7272
+rect 880 5912 13483 6192
+rect 798 4832 13483 5912
+rect 880 4552 13483 4832
+rect 798 3472 13483 4552
+rect 880 3192 13483 3472
+rect 798 2928 13483 3192
+rect 798 2648 13403 2928
+rect 798 2112 13483 2648
+rect 880 1832 13483 2112
+rect 798 752 13483 1832
+rect 880 579 13483 752
+<< metal4 >>
+rect 4068 2128 4668 14192
+rect 5008 2128 5608 14192
+rect 10068 2128 10668 14192
+rect 11008 2128 11608 14192
+<< obsm4 >>
+rect 4843 6699 4928 11117
+rect 5688 6699 5829 11117
+<< metal5 >>
+rect 1056 12146 13204 12746
+rect 1056 11206 13204 11806
+rect 1056 6146 13204 6746
+rect 1056 5206 13204 5806
+<< labels >>
+rlabel metal4 s 5008 2128 5608 14192 6 VGND
+port 1 nsew ground bidirectional
+rlabel metal4 s 11008 2128 11608 14192 6 VGND
+port 1 nsew ground bidirectional
+rlabel metal5 s 1056 6146 13204 6746 6 VGND
+port 1 nsew ground bidirectional
+rlabel metal5 s 1056 12146 13204 12746 6 VGND
+port 1 nsew ground bidirectional
+rlabel metal4 s 4068 2128 4668 14192 6 VPWR
+port 2 nsew power bidirectional
+rlabel metal4 s 10068 2128 10668 14192 6 VPWR
+port 2 nsew power bidirectional
+rlabel metal5 s 1056 5206 13204 5806 6 VPWR
+port 2 nsew power bidirectional
+rlabel metal5 s 1056 11206 13204 11806 6 VPWR
+port 2 nsew power bidirectional
+rlabel metal2 s 3514 15627 3570 16427 6 clk
+port 3 nsew signal input
+rlabel metal3 s 0 552 800 672 6 clk_gate_en
+port 4 nsew signal output
+rlabel metal3 s 13483 8168 14283 8288 6 clk_stable
+port 5 nsew signal input
+rlabel metal3 s 0 8712 800 8832 6 dvfs_ctrl[0]
+port 6 nsew signal output
+rlabel metal3 s 0 10072 800 10192 6 dvfs_ctrl[1]
+port 7 nsew signal output
+rlabel metal3 s 0 15512 800 15632 6 error
+port 8 nsew signal output
+rlabel metal3 s 0 1912 800 2032 6 pwr_gate_en
+port 9 nsew signal output
+rlabel metal3 s 13483 2728 14283 2848 6 pwr_stable
+port 10 nsew signal input
+rlabel metal3 s 0 11432 800 11552 6 pwr_state[0]
+port 11 nsew signal output
+rlabel metal3 s 0 12792 800 12912 6 pwr_state[1]
+port 12 nsew signal output
+rlabel metal2 s 1858 0 1914 800 6 req_idle
+port 13 nsew signal input
+rlabel metal2 s 8850 0 8906 800 6 req_off
+port 14 nsew signal input
+rlabel metal2 s 5354 0 5410 800 6 req_sleep
+port 15 nsew signal input
+rlabel metal3 s 0 7352 800 7472 6 reset_ctrl
+port 16 nsew signal output
+rlabel metal2 s 10598 15627 10654 16427 6 reset_n
+port 17 nsew signal input
+rlabel metal3 s 0 3272 800 3392 6 retention_en
+port 18 nsew signal output
+rlabel metal3 s 13483 13608 14283 13728 6 retention_ready
+port 19 nsew signal input
+rlabel metal3 s 0 5992 800 6112 6 retention_restore
+port 20 nsew signal output
+rlabel metal3 s 0 4632 800 4752 6 retention_save
+port 21 nsew signal output
+rlabel metal3 s 0 14152 800 14272 6 seq_busy
+port 22 nsew signal output
+rlabel metal2 s 12346 0 12402 800 6 wake_up
+port 23 nsew signal input
+<< properties >>
+string FIXED_BBOX 0 0 14283 16427
+string LEFclass BLOCK
+string LEFview TRUE
+string GDS_END 672264
+string GDS_FILE /openlane/designs/pmu_fsm/runs/automated_run_1_10_13_2025/results/signoff/pmu_fsm.magic.gds
+string GDS_START 254236
+<< end >>
+

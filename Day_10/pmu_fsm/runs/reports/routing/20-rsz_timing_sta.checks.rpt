@@ -1,0 +1,109 @@
+
+===========================================================================
+report_checks -unconstrained
+===========================================================================
+======================= Typical Corner ===================================
+
+Startpoint: retention_ready (input port clocked by clk)
+Endpoint: error (output port clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                          0.00    0.00   clock clk (rise edge)
+                          0.50    0.50   clock network delay (propagated)
+                          3.00    3.50 v input external delay
+     1    0.01    0.03    0.01    3.51 v retention_ready (in)
+                                         retention_ready (net)
+                  0.03    0.00    3.51 v input6/A (sky130_fd_sc_hd__buf_1)
+     1    0.01    0.06    0.11    3.62 v input6/X (sky130_fd_sc_hd__buf_1)
+                                         net6 (net)
+                  0.06    0.00    3.62 v _164_/A (sky130_fd_sc_hd__inv_2)
+     3    0.01    0.05    0.07    3.69 ^ _164_/Y (sky130_fd_sc_hd__inv_2)
+                                         _101_ (net)
+                  0.05    0.00    3.69 ^ _199_/B (sky130_fd_sc_hd__nand2_1)
+     1    0.00    0.05    0.05    3.74 v _199_/Y (sky130_fd_sc_hd__nand2_1)
+                                         _026_ (net)
+                  0.05    0.00    3.74 v _200_/B1 (sky130_fd_sc_hd__a211oi_1)
+     1    0.00    0.17    0.19    3.93 ^ _200_/Y (sky130_fd_sc_hd__a211oi_1)
+                                         net10 (net)
+                  0.17    0.00    3.93 ^ wire19/A (sky130_fd_sc_hd__clkbuf_1)
+     1    0.00    0.04    0.10    4.03 ^ wire19/X (sky130_fd_sc_hd__clkbuf_1)
+                                         net19 (net)
+                  0.04    0.00    4.03 ^ output10/A (sky130_fd_sc_hd__clkbuf_2)
+     1    0.02    0.12    0.16    4.19 ^ output10/X (sky130_fd_sc_hd__clkbuf_2)
+                                         error (net)
+                  0.12    0.00    4.19 ^ error (out)
+                                  4.19   data arrival time
+
+                         10.00   10.00   clock clk (rise edge)
+                          0.50   10.50   clock network delay (propagated)
+                         -0.30   10.20   clock uncertainty
+                          0.00   10.20   clock reconvergence pessimism
+                         -2.00    8.20   output external delay
+                                  8.20   data required time
+-----------------------------------------------------------------------------
+                                  8.20   data required time
+                                 -4.19   data arrival time
+-----------------------------------------------------------------------------
+                                  4.01   slack (MET)
+
+
+
+
+===========================================================================
+report_checks --slack_max -0.01
+============================================================================
+======================= Typical Corner ===================================
+
+No paths found.
+
+
+===========================================================================
+ report_check_types -max_slew -max_cap -max_fanout -violators
+============================================================================
+======================= Typical Corner ===================================
+
+
+max slew violations count Typical: 0
+max fanout violations count Typical: 0
+max cap violations count Typical: 0
+
+===========================================================================
+report_parasitic_annotation -report_unannotated
+============================================================================
+Found 2 unannotated drivers.
+ clkload0/Y
+ pmu_fsm_21/LO
+Found 18 partially unannotated drivers.
+ clk
+ reset_n
+ _162_/Y
+ _183_/Y
+ _191_/Y
+ _194_/X
+ _197_/Y
+ _198_/X
+ _200_/Y
+ _241_/Q
+ clkbuf_0_clk/X
+ clkbuf_1_0__f_clk/X
+ input2/X
+ output11/X
+ output17/X
+ output8/X
+ wire19/X
+ wire20/X
+
+===========================================================================
+max slew violation count 0
+max fanout violation count 0
+max cap violation count 0
+============================================================================
+
+===========================================================================
+check_setup -verbose -unconstrained_endpoints -multiple_clock -no_clock -no_input_delay -loops -generated_clocks
+===========================================================================
+Warning: There is 1 unconstrained endpoint.
+  dvfs_ctrl[0]

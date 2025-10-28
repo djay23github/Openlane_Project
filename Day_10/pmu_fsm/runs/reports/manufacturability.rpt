@@ -1,0 +1,19 @@
+Design Name: pmu_fsm
+Run Directory: /openlane/designs/pmu_fsm/runs/run_1_10_13_2025
+----------------------------------------
+
+Magic DRC Summary:
+Source: /openlane/designs/pmu_fsm/runs/run_1_10_13_2025/reports/signoff/drc.rpt
+Total Magic DRC violations is 0
+----------------------------------------
+
+LVS Summary:
+Source: /openlane/designs/pmu_fsm/runs/run_1_10_13_2025/logs/signoff/38-pmu_fsm.lef.lvs.log
+Number of nets: 187                        |Number of nets: 187                        
+Design is LVS clean.
+----------------------------------------
+
+Antenna Summary:
+Source: /openlane/designs/pmu_fsm/runs/run_1_10_13_2025/logs/signoff/40-arc.log
+Pin violations: 0
+Net violations: 0
