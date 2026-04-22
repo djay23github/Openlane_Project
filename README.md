@@ -86,6 +86,8 @@ Learning about different constructs and looping statements in the design - if-el
 
 ## 🗓️ Day 6 - PMU FSM Design RTL Coding
 
+Design specs, RTL code and verification given in a different github repository : (to be added).
+
 ---
 
 ### 🗓️ Day 7 - Timing Report Generation for Single Corner - PMU FSM
@@ -119,8 +121,14 @@ graph_analysis.py -  a python script to analyze the graphs for power and timing 
 
 ---
 
-### 🗓️ Day 10 - OpenLane Tool Flow Generation - RTL2GDSII
+### 🗓️ Day 10 - OpenLane Tool Flow Generation - RTL2GDSII ( Openlane Version 1.1.1 ) (currently deprecated)
 
-Completed the automated flow for PnR using Openlane tool for the PMU FSM Design and generated reports for analysis
+Completed the automated flow for PnR using Openlane tool for the PMU FSM Design and generated reports for analysis.
+
+---
+
+## Update :
+I used the current Librelane (https://github.com/librelane) version and Skywater130nm PDK to complete the PD Flow and analyze the results of the Power Management Unit FSM Design. You can view the design and results in the new repository (to be added).
+
 
 
