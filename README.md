@@ -79,7 +79,7 @@ Understanding the Gate Level Simulation ( Post-synthesis simulation ) to verify 
 
 ---
 
-## Day 5 - Constructs and Looping Statements
+## 🗓️ Day 5 - Constructs and Looping Statements
 Learning about different constructs and looping statements in the design - if-else, for , case, generate. Understanding the issues of improper coding styles.
 
 ---
