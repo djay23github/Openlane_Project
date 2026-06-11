@@ -128,7 +128,7 @@ Completed the automated flow for PnR using Openlane tool for the PMU FSM Design 
 ---
 
 ## Update :
-I used the current Librelane (https://github.com/librelane) version and Skywater130nm PDK to complete the PD Flow and analyze the results of the Power Management Unit FSM Design. You can view the design and results in the new repository (to be added).
+I used the current Librelane (https://github.com/librelane) version and Skywater130nm PDK to complete the PD Flow and analyze the results of the Power Management Unit FSM Design. You can view the design and results in the new repository in the [PMU FSM project](https://github.com/djay23github/RTL2GDSII_Power_Management_Unit_Design).
 
 
 
